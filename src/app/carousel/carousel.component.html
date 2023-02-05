@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="carousel">
+    <div *ngFor="let slide of slides; let i = index" [ngClass]="{'active': i === currentSlide}" class="slide">
+      <img [src]="slide.img">
+      <!-- <div class="caption">{{slide.caption}}</div> -->
+    </div>
+    <div class="arrows">
+      <span (click)="previousSlide()">&lt;</span>
+      <span (click)="nextSlide()">&gt;</span>
+    </div>
+  </div>
+  <div class="dots">
+    <span *ngFor="let slide of slides; let i = index" [ngClass]="{'active': i === currentSlide}"
+      (click)="goToSlide(i)"></span>
+  </div>
+</div>

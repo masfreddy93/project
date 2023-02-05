@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarouselComponent } from './carousel/carousel.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: CarouselComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
